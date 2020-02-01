@@ -20,6 +20,9 @@ function bfs() {
       break;
     } else {
       for (let neighbour of current.neighbours) {
+        if (neighbour.isWall) {
+          continue;
+        }
         // console.log(neighbour);
         if (!neighbour.discovered) {
           // console.log(neighbour);
