@@ -5,6 +5,7 @@ class Cell {
     this.neighbours = [];
     this.isStart = false;
     this.isEnd = false;
+    this.isWall = false;
     this.discovered = false;
     this.parent = null;
     this.isPath = false;
@@ -14,6 +15,9 @@ class Cell {
   show() {
     if (this.isStart) {
       this.clr = [0, 255, 0, 100];
+    }
+    if (this.isWall) {
+      this.clr = [50, 50, 50, 75];
     }
     if (this.isEnd) {
       this.clr = [255, 0, 0, 150];
