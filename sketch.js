@@ -1,6 +1,6 @@
 let rows;
 let cols;
-let cellsize = 20;
+let cellsize = 30;
 let grid = [];
 let solveButton;
 let clearButton;
