@@ -6,14 +6,14 @@ let solveButton;
 let clearButton;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1350, 600);
 
   rows = floor(height / cellsize);
   cols = floor(width / cellsize);
 
   //create cells
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
       let newCell = new Cell(i, j);
       grid.splice(index(i, j), 0, newCell);
     }
@@ -65,7 +65,7 @@ function draw() {
 
 //HELPER FUNCTONS
 function index(i, j) {
-  if (i < 0 || i >= rows || j < 0 || j >= cols) {
+  if (i < 0 || i >= cols || j < 0 || j >= rows) {
     return -1;
   }
   return i * rows + j;
@@ -75,8 +75,8 @@ function reset() {
   //clear the grid
   grid = [];
   //create cells
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
       let newCell = new Cell(i, j);
       grid.splice(index(i, j), 0, newCell);
     }
