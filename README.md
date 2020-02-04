@@ -1,4 +1,4 @@
-# bfs-path-finding
+# bfs-path-finding with animation
 a breadth first based path finding algorithm in a maze
 #how to use
 1. take cursor to the cell and press 's' to initialise starting node(one with green color).
