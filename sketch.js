@@ -6,7 +6,7 @@ let solveButton;
 let clearButton;
 
 function setup() {
-  createCanvas(1350, 600);
+  createCanvas(1351, 601);
 
   rows = floor(height / cellsize);
   cols = floor(width / cellsize);
